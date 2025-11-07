@@ -8,7 +8,6 @@
   --shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* === General === */
 body {
   margin: 0;
   font-family: "Tajawal", system-ui, sans-serif;
@@ -16,24 +15,27 @@ body {
   background: var(--bg);
   scroll-behavior: smooth;
 }
+
 .section {
   padding: clamp(30px, 6vw, 60px) 16px;
 }
+
 .section-head {
   text-align: center;
   margin-bottom: 18px;
 }
+
 .section-head h2 {
   margin: 0 0 6px;
   font-size: clamp(22px, 3vw, 34px);
   color: var(--brand2);
 }
+
 .section-head p {
   margin: 0;
   color: var(--muted);
 }
 
-/* === Navbar === */
 .navbar {
   position: sticky;
   top: 0;
@@ -45,7 +47,9 @@ body {
   border-bottom: 1px solid #ddd;
   padding: 12px 40px;
   box-shadow: var(--shadow);
+  z-index: 1000;
 }
+
 .nav a {
   color: var(--muted);
   text-decoration: none;
@@ -53,21 +57,28 @@ body {
   border-radius: 10px;
   transition: .3s;
 }
+
 .nav a:hover {
   background: var(--brand);
   color: #fff;
 }
+
 .nav a.active {
   background: linear-gradient(90deg, var(--brand), var(--brand2));
   color: #fff;
 }
+
 .brand {
   font-size: 22px;
   font-weight: 900;
   color: var(--text);
   text-decoration: none;
 }
-.brand span { color: var(--brand); }
+
+.brand span {
+  color: var(--brand);
+}
+
 #downloadCV {
   margin-inline-start: auto;
   border: 1px solid #ccc;
@@ -76,12 +87,12 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+
 #downloadCV:hover {
   background: var(--brand);
   color: #fff;
 }
 
-/* === Hero === */
 .hero {
   display: flex;
   align-items: center;
@@ -90,10 +101,9 @@ body {
   background: linear-gradient(180deg, #f9f9fb 0%, #f1f3f8 100%);
 }
 
-
 .hero-card {
   display: flex;
-  flex-direction: row; /* ✅ يخلي الصورة بالشمال والنص باليمين */
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
@@ -105,26 +115,25 @@ body {
   width: 100%;
 }
 
-
 .hero-info {
   flex: 1 1 480px;
-  color: #f5f7ff;
+  color: #1d2233;
 }
 
 .hero-info h1 {
   font-size: 1.9rem;
   margin-bottom: 6px;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .hero-info .subtitle {
-  color: #00f5ff;
+  color: var(--brand);
   font-weight: 600;
   margin-bottom: 12px;
 }
 
 .hero-info p {
-  color: #c5c4e8;
+  color: var(--muted);
   line-height: 1.8;
 }
 
@@ -139,13 +148,12 @@ body {
 .img-wrap img {
   width: 100%;
   height: auto;
-  max-height: 340px; /* 🔹 غيّر الرقم حسب ما بدك */
-  object-fit: cover; /* يخليها تظل متناسقة ومليانة بدون تمدد */
+  max-height: 340px;
+  object-fit: cover;
   border-radius: 16px;
   display: block;
 }
 
-/* === Buttons === */
 .btn {
   border: none;
   border-radius: 10px;
@@ -154,25 +162,28 @@ body {
   font-weight: 700;
   transition: 0.3s;
 }
+
 .btn.primary {
   background: linear-gradient(90deg, var(--brand), var(--brand2));
   color: #fff;
 }
+
 .btn.outline {
   border: 1px solid var(--brand);
   color: var(--brand);
   background: transparent;
 }
+
 .btn.ghost {
   border: 1px solid #ccc;
   background: transparent;
 }
+
 .btn:hover {
   transform: scale(1.05);
   box-shadow: var(--shadow);
 }
 
-/* === Skills === */
 .skills-grid {
   width: min(1100px, 92%);
   margin-inline: auto;
@@ -180,6 +191,7 @@ body {
   gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
+
 .skill {
   background: #fff;
   border: 1px solid #eee;
@@ -190,12 +202,12 @@ body {
   color: var(--text);
   transition: 0.3s;
 }
+
 .skill:hover {
   background: linear-gradient(90deg, var(--brand), var(--brand2));
   color: #fff;
 }
 
-/* === Projects & Contact === */
 .cards {
   display: grid;
   gap: 18px;
@@ -203,6 +215,7 @@ body {
   width: min(1100px, 92%);
   margin-inline: auto;
 }
+
 .card {
   background: #fff;
   border-radius: 14px;
@@ -210,11 +223,29 @@ body {
   overflow: hidden;
   transition: 0.3s;
 }
-.card:hover { transform: translateY(-5px); }
-.card img { width: 100%; display: block; }
-.body { padding: 16px; }
-.body h3 { margin: 0 0 6px; color: var(--brand); }
-.body p { margin: 0 0 12px; color: var(--muted); }
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.body {
+  padding: 16px;
+}
+
+.body h3 {
+  margin: 0 0 6px;
+  color: var(--brand);
+}
+
+.body p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
 
 .contact {
   display: flex;
@@ -223,6 +254,7 @@ body {
   gap: 10px;
   margin-top: 15px;
 }
+
 .chip {
   text-decoration: none;
   color: var(--text);
@@ -232,13 +264,13 @@ body {
   padding: .6rem .9rem;
   transition: 0.3s;
 }
+
 .chip:hover {
   background: var(--brand);
   color: #fff;
   border-color: var(--brand);
 }
 
-/* === Footer === */
 .footer {
   text-align: center;
   padding: 20px;
@@ -246,9 +278,27 @@ body {
   border-top: 1px solid #eee;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero-card {
-    flex-direction: column; 
+    gap: 30px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  #downloadCV {
+    margin-inline-start: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-card {
+    flex-direction: column;
     text-align: center;
     gap: 24px;
   }
@@ -260,7 +310,7 @@ body {
   }
 
   .hero-info h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .hero-info .subtitle {
@@ -281,12 +331,40 @@ body {
     gap: 10px;
   }
 
-  .hero-media .img-wrap img {
+  .img-wrap {
     width: 80%;
     max-width: 280px;
+    margin-inline: auto;
+  }
+
+  .img-wrap img {
+    width: 100%;
     height: auto;
     border-radius: 20px;
     box-shadow: var(--shadow);
   }
 }
 
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-info p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
