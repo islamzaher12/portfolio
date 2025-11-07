@@ -245,3 +245,48 @@ body {
   color: var(--muted);
   border-top: 1px solid #eee;
 }
+
+@media (max-width: 768px) {
+  .hero-card {
+    flex-direction: column; 
+    text-align: center;
+    gap: 24px;
+  }
+
+  .hero-info {
+    flex: unset;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .hero-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-info .subtitle {
+    font-size: 1rem;
+    color: var(--brand);
+  }
+
+  .hero-info p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .cta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero-media .img-wrap img {
+    width: 80%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+  }
+}
+
